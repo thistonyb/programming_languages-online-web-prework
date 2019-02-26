@@ -2,7 +2,7 @@ def reformat_languages(languages)
   new_hash = {}
   languages.each do |language_type, language_hash|
     languages[:language_type].each do |language_key, details_hash|
-      if new_hash.!include?(language_key)
+      if !new_hash.include?(language_key)
         new_hash[language_key] = details_hash
         new_hash[language_key][:style] = [:language_type]
       elsif
